@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('title',$post->title);
+@section('title',$post->title)
 @section('content')
     <a href="/posts" class="">Go back</a>
     <h1>{{$post->title}}</h1>
-    <img style="width:100%;" src="../storage/cover_images/{{$post->cover_image}}">
+    <img style="width:100%;" src="/storage/cover_images/{{$post->cover_image}}">
     <br><br>
     <div class="">
         {!! $post->body !!}

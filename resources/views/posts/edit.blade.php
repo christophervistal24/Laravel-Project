@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title','Create new post')
+@section('title',$post->title)
 @section('content')
     <h1 class="text-muted">Edit Post</h1>
     {!! Form::open(['action'=>['PostsController@update',$post->id], 'method' => 'POST' ,'enctype'=>'multipart/form-data']) !!}
