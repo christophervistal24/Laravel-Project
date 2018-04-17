@@ -3,7 +3,7 @@
 @section('content')
     <a href="/posts" class="">Go back</a>
     <h1>{{$post->title}}</h1>
-    <img style="width:100%;" src="https://evening-woodland-41780.herokuapp.com/lsapp/public/storage/cover_images/{{$post->cover_image}}">
+    <img style="width:100%;" src="https://evening-woodland-41780.herokuapp.com/public/storage/cover_images/{{$post->cover_image}}">
     <br><br>
     <div class="">
         {!! $post->body !!}
