@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PagesController extends Controller
 {
     public function index(){
-        $title = 'Home';
-        return view('pages.index')->with('title',$title);
+        $post = null;
+        // Check if the user already login
+        if(!empty(auth()->user()->id)){
+            $post = auth()->user()->id;
+        }
+
+        return view('pages.index')->with('post',$post);
     }
 
     public function about(){
